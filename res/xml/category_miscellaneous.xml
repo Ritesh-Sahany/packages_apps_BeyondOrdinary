@@ -20,13 +20,61 @@
     android:title="@string/category_miscellaneous_title" >
 
     <PreferenceCategory
+    android:title="@string/theming">
+
+    <!-- Black theme for dark mode -->
+    <com.genesis.support.preferences.SecureSettingSwitchPreference
+        android:key="berry_black_theme"
+        android:dependency="dark_ui_activated"
+        android:title="@string/berry_black_theme_title"
+        android:summary="@string/berry_black_theme_summary"
+        android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
     android:title="@string/spoofing">
 
-        <!-- Unlock FPS for specific games -->
-        <com.genesis.support.preferences.SystemPropertySwitchPreference
-            android:key="persist.sys.gameprops.enabled"
-            android:title="@string/use_games_spoof_title"
-            android:summary="@string/use_games_spoof_summary"
-            android:defaultValue="false" />
+    <!-- Unlock FPS for specific games -->
+    <com.genesis.support.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.gameprops.enabled"
+        android:title="@string/use_games_spoof_title"
+        android:summary="@string/use_games_spoof_summary"
+        android:defaultValue="false" />
+
+    <!-- Ignore window secure flags -->
+    <com.genesis.support.preferences.GlobalSettingSwitchPreference
+        android:key="window_ignore_secure"
+        android:title="@string/ignore_window_secure_title"
+        android:summary="@string/ignore_window_secure_summary"
+        android:defaultValue="false"/>
+
+    <!-- Hide developer status -->
+    <Preference
+        android:key="hide_developer_status_settings"
+        android:title="@string/hide_developer_status_title"
+        android:summary="@string/hide_developer_status_summary"
+        android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
+        settings:controller="com.android.settings.security.HideDeveloperStatusPreferenceController" />
+    </PreferenceCategory>
+
+    <!-- Incall vibration options -->
+    <PreferenceCategory
+        android:key="incall_vib_options"
+        android:title="@string/incall_vibration_category" >
+
+        <com.genesis.support.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_connect"
+            android:title="@string/incall_vibrate_connect_title"
+            android:defaultValue="true" />
+
+        <com.genesis.support.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_callwaiting"
+            android:title="@string/incall_vibrate_call_wait_title"
+            android:defaultValue="true" />
+
+        <com.genesis.support.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_disconnect"
+            android:title="@string/incall_vibrate_disconnect_title"
+            android:defaultValue="true" />
     </PreferenceCategory>
 </PreferenceScreen>

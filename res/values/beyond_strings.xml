@@ -16,9 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-     <!-- General -->
+    <!-- General -->
     <string name="general">General</string>
+    <string name="heads_up">Heads up</string>
+    <string name="icons">Icons</string>
+    <string name="power_button">Power button</string>
     <string name="spoofing">Spoofing</string>
+    <string name="theming">Theming</string>
     <string name="volume_button">Volume button</string>
     
     <!-- BeyondOrdinary -->

@@ -18,4 +18,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/category_lockscreen_title" >
+
+    <PreferenceCategory
+    android:title="@string/general">
+
+    <SwitchPreferenceCompat
+          android:key="pocket_judge"
+          android:title="@string/pocket_judge_title"
+          android:summary="@string/pocket_judge_summary" />
+
+     <!-- Enable AOD on charging only -->
+    <SwitchPreferenceCompat
+          android:key="doze_on_charge"
+          android:title="@string/doze_on_charge_title"
+          android:summary="@string/doze_on_charge_summary" />
+     </PreferenceCategory>
+
 </PreferenceScreen>
