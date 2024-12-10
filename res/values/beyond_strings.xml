@@ -18,6 +18,7 @@
 
      <!-- General -->
     <string name="general">General</string>
+    <string name="spoofing">Spoofing</string>
     <string name="volume_button">Volume button</string>
     
     <!-- BeyondOrdinary -->
